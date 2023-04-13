@@ -18,6 +18,8 @@
     margin:0px 1vw;
     animation: pulse 1.5s ease infinite;
     border: 1px solid;
+    flex-direction: column;
+    justify-content: center;
 }
 .bola > .num{
     font-size: 35px;
