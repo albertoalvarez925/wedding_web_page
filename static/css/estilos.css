@@ -101,4 +101,7 @@
       z-index: 10000;
       border-radius: 0px 0px 20px 20px;
     }
+    .masthead > .container-fluid{
+        padding-top: 40vh !important;
+    }
 }
