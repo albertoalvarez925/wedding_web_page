@@ -19,9 +19,9 @@
         <link href="static/css/estilos.min.css" rel="stylesheet" />
 
     </head>
-    <body>
+    <body style="background-color: rgba(221, 160, 221, .4);">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light nav-fill w-100" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light nav-fill w-100" id="mainNav" style="background-color: white;">
             <div class="container px-4 px-lg-5">
 				<a class="navbar-brand" href="index.html">Irene & Alberto</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,8 +52,8 @@
 			</div>
 		</header> -->
 		<!-- Main Content-->
-		<main class="mb-4 sinFoto">
-			<div class="container px-4 px-lg-5">
+		<main class="sinFoto">
+			<div class="container px-4 px-lg-5" style="background-color: white;min-height:calc(100vh - 55px);">
 				<div class="row gx-4 gx-lg-5 justify-content-center">
 					<div class="col-md-10 col-lg-8 col-xl-7">
 						<!-- style="line-height:1.25em; text-align:center; font-size:49px; margin-top:10%; color: #6C757D; font-family:Dancing Script" -->
@@ -66,51 +66,55 @@
 					<div class="col-md-10 col-lg-8 col-xl-7">
 						</br>
 						<ul class="row">
-							<li class="col-lg-6"><strong>Cuándo:</strong><span>15 Abril 2023</span></li>
-							<li class="col-lg-6"><strong>Dónde:</strong> <span>Sigüenza</span></li>
-							<li class="col-lg-6"><strong>Ceremonia:</strong> <span>Iglesia de San Vicente Mártir</span></li>
-							<li class="col-lg-6"><strong>Banquete:</strong> <span>Parador de Sigüenza</span></li>
+							<li class="col-lg-6"><strong>Cuándo: </strong><span>23 Septiembre 2023</span></li>
+							<li class="col-lg-6"><strong>Dónde: </strong> <span>Torremocha del Jarama</span></li>
+							<li class="col-lg-6"><strong>Ceremonia: </strong> <span>Casa de oficios</span></li>
+							<li class="col-lg-6"><strong>Enlace: </strong> 
+								<a href="https://goo.gl/maps/LPuGYwZ3yLcpUomx5">
+                                	Google Maps
+                            	</a>
+							</li>
 						</ul>
 						
-						<form class="mt-5" id="formConfirm">		
+						<form class="mt-3" id="formConfirm">		
 							<div class="row">
 								<!-- Nombre-->
-								<div class="col-lg-6 form-group">
+								<div class="col-lg-6 my-1 form-group">
 									<!-- style="color:bg-gradient-second !important; font-weight: bold; margin-top:0%" -->
 									<label class="form-label text-second">Nombre:</label>
 									<input type="text" name="nombre" class="form-control form-control-user" id="nombre" placeholder="Nombre*" required>
 								</div>
 									
 								<!-- Apellidos--> 
-								<div class="col-lg-6 form-group">
+								<div class="col-lg-6 my-1 form-group">
 									<label class="form-label text-second">Apellidos:</label>
 									<input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Apellidos*" required>
 								</div>
 
 								<!-- Num Tel--> 
-								<div class="col-lg-6 form-group">
+								<div class="col-lg-6 my-1 form-group">
 									<label class="form-label text-second">Número de móvil:</label>
 									<input type="text" class="form-control" name="movil" id="movil" placeholder="Número de móvil*" required>
 								</div>
 
 								<!-- Mail--> 
-								<div class="col-lg-6 form-group">
+								<div class="col-lg-6 my-1 form-group">
 									<label class="form-label text-second">Correo electrónico:</label>
 									<input type="mail" class="form-control" name="mail" id="mail" placeholder="Correo electrónico*" required>
 								</div>
 
 								<!-- Num Adultos -->
-								<div class="col-lg-6 form-group">
+								<div class="col-lg-6 my-1 form-group">
 									<label class="form-label text-second">¿Cuántos adultos vais a venir?</label>
 									<input type="number" class="form-control" name="adultos" id="adultos" placeholder="" required>
 								</div>
 								<!-- Num niños--> 
-								<div class="col-lg-6 form-group">
+								<div class="col-lg-6 my-1 form-group">
 									<label class="form-label text-second">¿Cuántos niños van a venir?</label>
 									<input type="number" class="form-control" name="ninos" id="ninos" placeholder="">
 								</div>
 
-								<div class="col-12 form-group">
+								<div class="col-12 form-group my-1">
 									<!-- style="color:bg-gradient-second !important; font-weight: bold; margin-top:1%; margin-bottom:2%" -->
 									<label class="form-label text-second">¿Vendréis en bus?</label>
 									<div class="row-md-6 form-group" required>
@@ -126,7 +130,7 @@
 								</div>
 
 								<!-- Alergias -->
-								<div class="col-lg-12 form-group mt-3 mt-md-0">
+								<div class="col-lg-12 form-group mt-2">
 									<label class="form-label text-second">¿Tenéis alguna alergia o intolerancia? 
 										<span class="fst-italic" style="font-size: 0.95rem;">Si sois vegetarianos/veganos/etc también lo podéis indicar aquí</span>
 									</label>
@@ -134,14 +138,14 @@
 								</div>
 
 								<!-- Comentario -->
-								<div class="col-lg-12 form-group mt-3 mt-md-0">
+								<div class="col-lg-12 form-group mt-2">
 									<label class="form-label text-second">¿Algo que nos queráis decir?</label>
 									<textarea class="form-control" name="comentarios" id="comentarios" cols="30" rows="3" maxlength="255"></textarea>
 								</div>
 
 								<!-- Botón enviar -->
 								<div class="text-center">
-									<button class = "btn btn-outline-secondary btn-xl" type="submit" style="border-radius: 24px">Enviar!</button></div>
+									<button class = "btn btn-outline-secondary btn-xl my-3" type="submit" style="border-radius: 24px">Enviar!</button></div>
 								</div>
 							</div>						
 						</form>

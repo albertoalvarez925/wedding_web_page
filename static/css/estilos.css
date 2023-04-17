@@ -105,6 +105,10 @@
         padding-top: 40vh !important;
     }
 }
+
+.form-label{
+    font-weight: bold;
+}
 /*********************************************************************/
 .timeline {
   border-left: 1px solid hsl(0, 0%, 90%);
