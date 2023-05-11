@@ -68,6 +68,9 @@ body{
     top: 20px;
     margin-left: -10px;
 }
+input{
+    font-size: inherit !important;
+}
 .separline:before {
     top: 20px;
     bottom: 0;
