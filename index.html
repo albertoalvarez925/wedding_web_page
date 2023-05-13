@@ -28,7 +28,7 @@
                     <h1 class="font-weight-bold" style="font-size: 4rem;">Irene & Alberto</h1>
                     <hr class="divider m-0" />
                 </div>
-                <div class="col-lg-8 align-self-baseline">
+                <div class="col-lg-8 align-self-baseline" id="principal">
                     <p class="mb-0 mb-m-4" style="font-size: 3rem;"> 23 - 09 - 2023 </p>
                     <div class="col-12">
                         <div class="row justify-content-center">
@@ -115,7 +115,7 @@
 
         $(document).ready(function(){
             console.log('scrol!')
-            $('body').animate({
+            $('#principal').animate({
                 scrollTop: 1000000000
             }, 800);
         })
