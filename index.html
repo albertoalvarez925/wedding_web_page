@@ -64,6 +64,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     
     <script>
+
         function getTimeRemaining(endtime) {
             // Calcula la diferencia en milisegundos
             const diferencia = Math.abs(Date.parse(endtime) - Date.parse(new Date()));
@@ -113,12 +114,7 @@
         const deadline = new Date(2023, 8, 23, 18, 30, 0, 0)
         initializeClock(deadline);
 
-        $(document).ready(function(){
-            console.log('scrol!')
-            $('#principal').animate({
-                scrollTop: 1000000000
-            }, 800);
-        })
+        
 
     </script>
 
