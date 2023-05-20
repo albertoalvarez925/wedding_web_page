@@ -97,7 +97,9 @@
 
             function updateClock() {
                 const t = getTimeRemaining(endtime);
-
+                if (t.days ==0){
+                    daysSpan.parent().addClass('d-none')
+                }
                 daysSpan.text(t.days);
                 hoursSpan.text(('0' + t.hours).slice(-2));
                 minutesSpan.text(('0' + t.minutes).slice(-2));
@@ -111,7 +113,7 @@
             const timeinterval = setInterval(updateClock, 1000);
         }
 
-        const deadline = new Date(2023, 8, 23, 18, 30, 0, 0)
+        const deadline = new Date(2023, 8, 23, 18, 0, 0, 0)
         initializeClock(deadline);
 
         window.scrollTo({
