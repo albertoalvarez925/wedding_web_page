@@ -42,6 +42,7 @@ body{
     position: absolute;
     top: 0;
     height: 55px;
+    z-index:100000 !important;
 }
 #mainNav.is-visible {
     transform: translate3d(0, 100%, 0);
