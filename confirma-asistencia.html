@@ -100,12 +100,12 @@
 									<!-- Num Adultos -->
 									<div class="col-lg-6 my-1 form-group">
 										<label class="form-label text-second">¿Cuántos adultos vais a venir?</label>
-										<input type="number" class="form-control" name="adultos" id="adultos" placeholder="" required>
+										<input type="number" class="form-control" name="adultos" id="adultos" min="0" placeholder="" required>
 									</div>
 									<!-- Num niños--> 
 									<div class="col-lg-6 my-1 form-group">
 										<label class="form-label text-second">¿Cuántos niños van a venir?</label>
-										<input type="number" class="form-control" name="ninos" id="ninos" placeholder="">
+										<input type="number" class="form-control" name="ninos" id="ninos" min="0" placeholder="">
 									</div>
 
 									<div class="col-12 form-group my-1">
@@ -138,7 +138,9 @@
 
 									<!-- Botón enviar -->
 									<div class="text-center">
-										<button class = "btn btn-outline-secondary btn-xl my-3 estilo_boton" type="submit" >Enviar!</button></div>
+										<button class = "btn btn-outline-secondary btn-xl my-3 estilo_boton" type="submit" >
+											<div id="spin" class="d-none spinner-border" role="status"></div><span id="real">Enviar!</span> 
+										</button>
 									</div>
 								</div>						
 							</form>
@@ -168,26 +170,29 @@
 		
         
         <script>
-			$("#formConfirm").on("submit", function(e){
-				e.preventDefault()
-				let data = $("#formConfirm").serializeArray()
-				$.ajax({
-					url: "https://api.apispreadsheets.com/data/1bysPr6qgBItEphT/",
-					type: "post",
-					data: data,
-					success: function(){
-						// alert("Form Data Submitted :)")
-						$('#modal').modal('show');
-					},
-					error: function(){
-						alert("Se ha producido un error al enviar los datos :( \n Inténtalo más tarde")
-					}
-				});
-			})
-			function modal(){
-				$('#modal').modal('show');
-			}
-		</script>
+            $("#formConfirm").on("submit", function(e){
+                e.preventDefault()
+                let data = $("#formConfirm").serializeArray()
+                $("#spin").removeClass('d-none')
+                $("#real").addClass('d-none')
+                $.ajax({
+                    url: "https://api.apispreadsheets.com/data/1bysPr6qgBItEphT/",
+                    type: "post",
+                    data: data,
+                    success: function(){
+                        $("#spin").addClass('d-none')
+                        $("#real").removeClass('d-none')
+                        // alert("Form Data Submitted :)")
+                        $('#modal').modal('show');
+                    },
+                    error: function(){
+                        $("#spin").addClass('d-none')
+                        $("#real").removeClass('d-none')
+                        alert("Se ha producido un error al enviar los datos :( \n Inténtalo más tarde")
+                    }
+                });
+            })
+        </script>
 		<!-- Core theme JS-->
         <script src="static/js/scripts.js"></script>
     </body>
